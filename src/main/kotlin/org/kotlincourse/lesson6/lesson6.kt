@@ -6,10 +6,10 @@ fun main(){
     whitchPetAge(7)
     typeOfTransport(6)
     calcBonus(1100)
-    determinationTypeDocument("jpg")
+    println( determinationTypeDocument(".jpg"))
     getTemperature(8, "C")
     getTemperature(78, "F")
-    getClothesForWeather(-8)
+    println( getClothesForWeather(48))
     choiceMovie(18)
 }
 
@@ -66,19 +66,14 @@ fun calcBonus(totalSum: Int){
     }
 }
 
-fun determinationTypeDocument(typeOfDocument:String){
-    if (typeOfDocument == "txt"){
-        println("Текстовый документ")
+fun determinationTypeDocument(typeOfDocument:String): String{
+    val totalType: String = when(typeOfDocument){
+        in ".txt", ".doc", ".docx" -> "Текстовый документ"
+        in ".jpg", ".jpeg", ".png" -> "Изображение"
+        in ".exc", ".csv" -> "Таблица"
+        else -> "Wtf"
     }
-    else if (typeOfDocument == "jpg"){
-        println("Изображение")
-    }
-    else if (typeOfDocument == "exc"){
-        println("Таблица")
-    }
-    else {
-        println("Изображение")
-    }
+    return totalType
 }
 
 fun getTemperature(temperature: Int, typeOfTemp: String){
@@ -92,24 +87,12 @@ fun getTemperature(temperature: Int, typeOfTemp: String){
     }
 }
 
-fun getClothesForWeather(temperature: Int){
-    var costume1 = 0 .. 15
-    var costume2 = 15..35
-    var costume3 = -30 .. 0
-    if (temperature in costume1){
-        println("windbreaker")
-    }
-    else if (temperature in costume2){
-        println("Tshirt + shorts")
-    }
-    else if (temperature in costume3){
-        println("jacket + cap")
-    }
-    else if (temperature < -30 ){
-        println("Stay home")
-    }
-    else if (temperature > 35){
-        println("Stay home")
+fun getClothesForWeather(temperature: Int): String{
+    return when(temperature){
+        in 0 .. 15 -> "windbreaker"
+        in 15..35 -> "Tshirt + shorts"
+        in -30 until 0 -> "jacket + cap"
+        else -> "Stay home"
     }
 }
 
