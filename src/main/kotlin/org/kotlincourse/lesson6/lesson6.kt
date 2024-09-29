@@ -9,6 +9,8 @@ fun main(){
     determinationTypeDocument("jpg")
     getTemperature(8, "C")
     getTemperature(78, "F")
+    getClothesForWeather(-8)
+    choiceMovie(18)
 }
 
 fun season(month:String?){
@@ -87,5 +89,41 @@ fun getTemperature(temperature: Int, typeOfTemp: String){
     else if(typeOfTemp == "F"){
         val celcius = 5 * (temperature - 32)/9
         println("Температура $celcius C")
+    }
+}
+
+fun getClothesForWeather(temperature: Int){
+    var costume1 = 0 .. 15
+    var costume2 = 15..35
+    var costume3 = -30 .. 0
+    if (temperature in costume1){
+        println("windbreaker")
+    }
+    else if (temperature in costume2){
+        println("Tshirt + shorts")
+    }
+    else if (temperature in costume3){
+        println("jacket + cap")
+    }
+    else if (temperature < -30 ){
+        println("Stay home")
+    }
+    else if (temperature > 35){
+        println("Stay home")
+    }
+}
+
+fun choiceMovie(age: Int){
+    var forKids = 0..12
+    var forTeen = 13..17
+    var forAdults = 18
+    if (age in forKids){
+        println("You can watch movie for kids")
+    }
+    else if (age in forTeen){
+        println("You can watch movies for Teenager and Kids")
+    }
+    else if(age >= forAdults){
+        println("You can watch all movies")
     }
 }
