@@ -15,8 +15,20 @@ fun main() {
     val isLesserOrEquel = ( 5 <= 5)
     val andResul= false && false
     val orResult = true || false
+    val notResult = !(5 > 3)
+    var numder = 5
+    numder += 3
+    numder -= 2
+
+     val wtf = (5 % 2 != 1)
+
+    println(wtf)
 
 
+    printVolume(null)
+}
 
-    println()
+fun printVolume(userVolume: Int?){
+    val defaultVolume = 30
+    println(userVolume ?: defaultVolume)
 }
