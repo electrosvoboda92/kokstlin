@@ -18,8 +18,8 @@ fun main(){
 //    forBreaker()
 //    breakWhile()
 //    continueFor()
-//    continueWhile()
-    ebat()
+    continueWhile()
+//    ebat()
 }
 
 
