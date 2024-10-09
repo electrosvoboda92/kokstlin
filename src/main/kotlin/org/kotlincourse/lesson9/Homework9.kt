@@ -5,7 +5,7 @@ fun main() {
     val hwArray1 = arrayOf(1, 2, 3, 4, 5)
     println("Task 1 on Array $hwArray1")
 
-    val hwArray2 = Array(10) { }
+    val hwArray2 = Array<String>(10){" "}
     println("Task 2 on Array $hwArray2")
 
     val hwArray3: Array<Double> = Array(5) { 0.0 }
@@ -129,8 +129,10 @@ fun main() {
         println("Task 10 on List min: $min, max: $max")
     }
 
+
+
     val hwList11 = listOf(13, 41, 63, 41, 13, 12, 24, 68, 75)
-    var justListNumbers = mutableListOf<Int>()
+    val justListNumbers = mutableListOf<Int>()
     for (number in hwList11) {
         if (number % 2 == 0) {
             justListNumbers.add(number)
@@ -191,8 +193,8 @@ fun main() {
     }
     println("Task 9 on Set $hwSet9")
 
-    val setStrings1 = setOf("Beer", "Wine", "Rom")
-    val setStrings2 = setOf("Cola","Rom", "juice")
+    val setStrings1 = setOf("Cola","Rom", "juice", "Gin")
+    val setStrings2 = setOf("Beer", "Wine", "Rom")
 
     val hwSet10 = mutableSetOf<String>()
 
