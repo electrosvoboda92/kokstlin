@@ -37,9 +37,9 @@ fun main() {
     val hwDict9 = mutableMapOf<Int, String>()
     for ((keys1, values1) in dict1) {
         hwDict9[keys1] = values1
-        for ((keys2, values2) in dict2) {
-            hwDict9[keys2] = values2
-        }
+    }
+    for ((keys2, values2) in dict2) {
+        hwDict9[keys2] = values2
     }
     println("Task 9: $hwDict9")
 
@@ -49,9 +49,10 @@ fun main() {
 
     println("Task 10: $hwDict10")
 
-    val hwDict11 = mutableMapOf<Int, Set<String>>()
+    val hwDict11 = mutableMapOf<Int, MutableSet<String>>()
     hwDict11[27] = mutableSetOf("Nirvana", "Doors", "Jimmy Hendrix")
     hwDict11[60] = mutableSetOf("Pink Floyd", "Beatles")
+    hwDict11[60]?.add("Fuzz")
     println("Task 11: $hwDict11")
 
     val hwDict12: Map<Pair<Int, Int>, String> = mapOf(
