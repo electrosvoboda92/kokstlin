@@ -1,10 +1,10 @@
 package org.kotlincourse.lesson11
 
-fun main(){
+fun main() {
     println("Spec Task 1 ${multyPlayByTwo(4)}")
     println("Spec Task 2 ${isEven(5)}")
     println("Spec Task 3 ${printNumberUntil(5)}")
-    println("Spec Task 4 ${findFirstNegative(listOf(2, 5, -1, - 4))}")
+    println("Spec Task 4 ${findFirstNegative(listOf(2, 5, -1, -4))}")
     println("Spec Task 5:")
     processList(listOf("Kak", "Ze", "Eto", "Vse", "", "Hahaha"))
     println("Task 1: ${hwFun1()}")
@@ -20,40 +20,43 @@ fun main(){
 
 }
 
-fun multyPlayByTwo(number: Int): Int{
-    return number*2
+fun multyPlayByTwo(number: Int): Int {
+    return number * 2
 }
 
-fun isEven(number: Int): Boolean{
-    if (number % 2 == 0){
+fun isEven(number: Int): Boolean {
+    if (number % 2 == 0) {
         return true
-    }
-    else{
+    } else {
         return false
     }
 }
 
-fun printNumberUntil(n: Int): Int{
-    var i = 0
-    while (n > i){
+fun printNumberUntil(n: Int) {
+//    var i = 0
+//    while (n > i){
+//        println(i)
+//        i++
+//    }
+//    return i
+    if (n < 1) return
+    for (i in 1..n) {
         println(i)
-        i++
     }
-    return i
 }
 
 fun findFirstNegative(spicok: List<Int>): Int? {
-    for (i in spicok){
-        if (i < 0){
+    for (i in spicok) {
+        if (i < 0) {
             return i
         }
     }
     return null
 }
 
-fun processList(spisokStrok: List<String>): String?{
-    for (stroka in spisokStrok){
-        if(stroka.isEmpty()){
+fun processList(spisokStrok: List<String>): String? {
+    for (stroka in spisokStrok) {
+        if (stroka.isEmpty()) {
             return null
         }
         println(stroka)
@@ -61,45 +64,44 @@ fun processList(spisokStrok: List<String>): String?{
     return null
 }
 
-fun hwFun1(){
+fun hwFun1() {
 
 }
 
-fun hwFun2(number1: Int, number2:Int) = number1 + number2
+fun hwFun2(number1: Int, number2: Int) = number1 + number2
 
-fun hwFun3(stroka: String){
+fun hwFun3(stroka: String) {
 
 }
 
-fun hwFin4(spisokNumbers: List<Int>): Double?{
+fun hwFin4(spisokNumbers: List<Int>): Double? {
     var count = 0
-    for (i in spisokNumbers){
+    for (i in spisokNumbers) {
         count += i
     }
-    return (count/spisokNumbers.size).toDouble()
+    return (count / spisokNumbers.size).toDouble()
 }
 
-fun hwFun5(stroka: String?): Int?{
+fun hwFun5(stroka: String?): Int? {
     val a = stroka?.length
     return a
 }
 
-fun hwFun6():Float?{
+fun hwFun6(): Float? {
     return null
 }
 
-fun hwFun7(spisok: List<Int>?):Int?{
+fun hwFun7(spisok: List<Int>?) {
+}
+
+fun hwFun8(number: Int): String? {
     return null
 }
 
-fun hwFun8(number: Int): String?{
+fun hwFun9(): List<String>? {
     return null
 }
 
-fun hwFun9():List<String>?{
-    return null
-}
-
-fun hwFun10(stroka: String?, number: Int?): Boolean?{
+fun hwFun10(stroka: String?, number: Int?): Boolean? {
     return null
 }
