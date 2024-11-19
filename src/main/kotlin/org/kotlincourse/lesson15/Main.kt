@@ -46,7 +46,7 @@ class Car(
         println("Direction $direction is on")
     }
 
-    fun activateWipers(){
+    fun activateWipers() {
         println("Window cleaner is On")
     }
 }
